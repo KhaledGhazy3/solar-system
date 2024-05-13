@@ -52,9 +52,10 @@ jobs:
         - name: install dependencies
           run: npm install
 
-        - name: check code coverage
-          continue-on-error: ture 
+        - name: Check Code Coverage
+          continue-on-error: true
           run: npm run coverage
+        
         
         - name: Archive Test Results
           uses: actions/upload-artifact@v3
