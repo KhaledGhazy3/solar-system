@@ -53,7 +53,7 @@ jobs:
           run: npm install
 
         - name: Check Code Coverage
-          if : failure()
+          if : always()
           run: npm run coverage
         
         
