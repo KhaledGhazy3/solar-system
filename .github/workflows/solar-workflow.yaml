@@ -32,11 +32,11 @@ jobs:
           run: npm test 
         
         - name: Upload Unit Test Results
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v2
           with:
             name: unit-test-results
-            path: unit-test.xml
-        
+            path: path/to/unit-test.xml
+      
          
          
 
