@@ -1,5 +1,6 @@
 name: Solar System Workflow
 
+
 on:
   workflow_dispatch:
   push:
@@ -24,7 +25,7 @@ jobs:
           run: npm install
 
         - name: unit testing
-          run: npm test
+          run: npm test 
          
          
 
