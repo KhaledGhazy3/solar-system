@@ -76,6 +76,22 @@ jobs:
             path: coverage
             retrntion-days: 5
 
+    docker:
+        name: container
+        needs: [unit-testing, code-coverage]
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout repo
+          uses: actions/checkout@v3
+
+        - name: dockerhub login
+          uses: docer/login-action@3
+          with:
+            username: ${{ vars.DOCKER_USERNAME}}
+            password: ${{ secrets.DOCKER_PASSWORD}}
+
+
+
         
 
         
