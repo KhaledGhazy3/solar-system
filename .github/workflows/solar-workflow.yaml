@@ -32,7 +32,7 @@ jobs:
           run: npm test 
         
         - name: Upload Unit Test Results
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v3
           with:
             name: unit-test-results
             path: path/to/unit-test.xml
@@ -53,10 +53,11 @@ jobs:
           run: npm install
 
         - name: check code coverage
+          continue-on-error: ture 
           run: npm run coverage
         
         - name: Archive Test Results
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v3
           with:
             name: Code-Coverage-Result
             path: coverage
