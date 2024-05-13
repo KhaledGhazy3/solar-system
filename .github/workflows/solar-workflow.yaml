@@ -118,6 +118,7 @@ jobs:
             context: .
             push: true
             tags: solar-system:${{ github.sha }}
+            
           
                 
             
