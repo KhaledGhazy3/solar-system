@@ -31,12 +31,12 @@ jobs:
         - name: unit testing
           run: npm test 
         
-        - name: Archive unit-test
+        - name: Upload Unit Test Results
           uses: actions/upload-artifact@v3
-          with: 
-            name: unit-test
+          with:
+            name: unit-test-results
             path: unit-test.xml
-         
+        
          
          
 
