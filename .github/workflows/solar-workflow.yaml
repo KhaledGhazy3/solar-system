@@ -139,8 +139,9 @@ jobs:
                 kubeconfig: ${{ secrets.KUBECONFIG}}
 
             - name: kubernetes cluster
-              run:
-          
+              run: | 
+               kubectl version --short
+               echo -------------------
                kubectl get nodes
             
                 
