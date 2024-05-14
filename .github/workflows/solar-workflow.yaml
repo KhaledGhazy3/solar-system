@@ -160,7 +160,7 @@ jobs:
 
             - name: check files
               run: | 
-               kubernetes/development/*.yaml 
+               cat kubernetes/development/*.yaml 
              
 
                
